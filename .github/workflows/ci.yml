@@ -24,7 +24,7 @@ jobs:
           filter: tree:0
           fetch-depth: 0
 
-      # - run: npx nx-cloud start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="build"
+      - run: npx nx-cloud start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="build" --with-env-vars="ANTHROPIC_API_KEY"
 
       # Cache node_modules
       - uses: actions/setup-node@v4
@@ -37,4 +37,4 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
 
       # run build tests and lints
-      - run: npx nx affected -t lint test build
+      - run: npx nx run-many -t lint test build
