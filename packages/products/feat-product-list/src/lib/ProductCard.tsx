@@ -27,7 +27,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
       <Link to={`/product/${id}`} className="block">
         <div className="relative">
           <img src={image} alt={name} className="w-full h-64 object-cover" />
-          <button className="absolute top-3 right-3 bg-white p-1.5 rounded-full shadow-sm hover:bg-gray-100 z-10" onClick={(e) => e.preventDefault()}>
+          <button
+            className="absolute top-3 right-3 bg-white p-1.5 rounded-full shadow-sm hover:bg-gray-100 z-10"
+            onClick={(e) => e.preventDefault()}
+          >
             {/* Heart icon placeholder */}
             <span role="img" aria-label="favorite">
               ♡
@@ -44,7 +47,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
       <div className="p-4">
         <span className="text-sm text-gray-500">{category}</span>
         <Link to={`/product/${id}`} className="block">
-          <h3 className="font-semibold text-gray-800 mt-1 hover:text-indigo-600">{name}</h3>
+          <h3 className="font-semibold text-gray-800 mt-1 hover:text-indigo-600">
+            {name}
+          </h3>
         </Link>
 
         <div className="flex items-center mt-1">
@@ -71,11 +76,23 @@ const ProductCard: React.FC<ProductCardProps> = ({
             )}
           </div>
 
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white p-2 rounded-full">
-            {/* Shopping cart icon placeholder */}
-            <span role="img" aria-label="cart">
-              🛒
-            </span>
+          <button className="bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full transition-colors duration-200">
+            {/* Clean SVG shopping cart icon */}
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Add to cart"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m7.5-5v0a2 2 0 11-4 0m4 0a2 2 0 11-4 0"
+              />
+            </svg>
           </button>
         </div>
       </div>

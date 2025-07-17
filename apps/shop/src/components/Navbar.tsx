@@ -1,4 +1,5 @@
 import { ShoppingCart, Search, User, Menu, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -6,20 +7,20 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center">
-            <a
-              href="#"
+            <Link
+              to="/"
               className="text-2xl font-bold text-indigo-600 mr-8"
               data-testid="navbar-title"
             >
               ShopSecure
-            </a>
+            </Link>
             <nav className="hidden md:flex space-x-6">
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="text-gray-600 hover:text-indigo-600 font-medium"
               >
                 Home
-              </a>
+              </Link>
               <a
                 href="#"
                 className="text-gray-600 hover:text-indigo-600 font-medium"
@@ -37,12 +38,6 @@ const Navbar = () => {
                 className="text-gray-600 hover:text-indigo-600 font-medium"
               >
                 Deals
-              </a>
-              <a
-                href="#"
-                className="text-gray-600 hover:text-indigo-600 font-medium"
-              >
-                About
               </a>
             </nav>
           </div>
@@ -73,9 +68,27 @@ const Navbar = () => {
                   3
                 </span>
               </a>
-              <a href="#" className="text-gray-600 hover:text-indigo-600">
-                <User size={22} />
-              </a>
+              <div className="relative group">
+                <a href="#" className="text-gray-600 hover:text-indigo-600">
+                  <User size={22} />
+                </a>
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <div className="py-1">
+                    <Link
+                      to="/orders"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      Current Orders
+                    </Link>
+                    <Link
+                      to="/orders/past"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      Order History
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 

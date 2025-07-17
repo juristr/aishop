@@ -32,6 +32,18 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
+      "path": "../../packages/orders/feat-cancel-order/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/orders/feat-past-orders/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/orders/feat-current-orders/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/orders/feat-create-order/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/products/feat-product-list/tsconfig.lib.json"
     },
     {

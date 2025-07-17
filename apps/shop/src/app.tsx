@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
+import OrdersPage from './pages/OrdersPage';
+import PastOrdersPage from './pages/PastOrdersPage';
+import CreateOrderPage from './pages/CreateOrderPage';
 import { ProductDetailPage } from '@aishop/feat-product-detail';
 
 export function App() {
@@ -14,6 +17,9 @@ export function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/product/:id" element={<ProductDetailPage />} />
+            <Route path="/orders" element={<OrdersPage />} />
+            <Route path="/orders/past" element={<PastOrdersPage />} />
+            <Route path="/orders/create" element={<CreateOrderPage />} />
           </Routes>
         </main>
         <Footer />

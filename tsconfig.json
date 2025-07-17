@@ -40,9 +40,6 @@
       "path": "./packages/orders/feat-past-orders"
     },
     {
-      "path": "./packages/orders/feat-orders"
-    },
-    {
       "path": "./packages/orders/feat-cancel-order"
     },
     {

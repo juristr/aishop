@@ -16,7 +16,6 @@
     "@aishop/ui-order-detail": "*"
   },
   "nx": {
-    "name": "feat-cancel-order",
     "tags": [
       "npm:public",
       "scope:orders",
