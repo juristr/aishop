@@ -58,5 +58,8 @@
     "testtailwindapp",
     "tools/*",
     "packages/*"
-  ]
+  ],
+  "overrides": {
+    "ajv": "^8.0.0"
+  }
 }
