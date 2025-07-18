@@ -35,7 +35,7 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
 
       # run build tests and lints
-      - run: npx nx affected -t lint test build
+      - run: npx nx run-many -t lint test build
 
       # - run: npx nx-cloud fix-ci
       #   if: always()

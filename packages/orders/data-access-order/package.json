@@ -19,5 +19,6 @@
       "scope:orders",
       "type:data-access"
     ]
-  }
+  },
+  "module": "./dist/index.js"
 }
