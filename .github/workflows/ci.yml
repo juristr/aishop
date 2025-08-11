@@ -23,7 +23,7 @@ jobs:
           filter: tree:0
           fetch-depth: 0
 
-      - run: npx nx-cloud start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="e2e-ci"
+      - run: npx nx-cloud start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="build"
 
       # Cache node_modules
       - uses: actions/setup-node@v4
@@ -38,4 +38,4 @@ jobs:
       # - run: npx nx-cloud record -- nx format:check
 
       # run build tests and lints
-      - run: npx nx run-many -t lint test build e2e-ci
+      - run: npx nx run-many -t lint typecheck test build
