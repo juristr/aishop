@@ -14,9 +14,7 @@
     {
       "plugin": "@nx/js/typescript",
       "options": {
-        "typecheck": {
-          "targetName": "typecheck"
-        },
+        "typecheck": { "targetName": "typecheck" },
         "build": {
           "targetName": "build",
           "configName": "tsconfig.lib.json",
@@ -50,20 +48,11 @@
         "typecheckTargetName": "typecheck"
       }
     },
-    {
-      "plugin": "@nx/playwright/plugin",
-      "options": {
-        "targetName": "e2e"
-      }
-    }
+    { "plugin": "@nx/playwright/plugin", "options": { "targetName": "e2e" } }
   ],
   "targetDefaults": {
-    "test": {
-      "dependsOn": ["^build"]
-    },
-    "dev": {
-      "dependsOn": ["^build"]
-    },
+    "test": { "dependsOn": ["^build"] },
+    "dev": { "dependsOn": ["^build"] },
     "@nx/js:tsc": {
       "cache": true,
       "dependsOn": ["^build"],
@@ -78,14 +67,8 @@
         "linter": "none",
         "bundler": "vite"
       },
-      "component": {
-        "style": "css"
-      },
-      "library": {
-        "style": "css",
-        "linter": "none",
-        "unitTestRunner": "none"
-      }
+      "component": { "style": "css" },
+      "library": { "style": "css", "linter": "none", "unitTestRunner": "none" }
     }
   },
   "owners": {
@@ -128,5 +111,6 @@
       }
     ]
   },
-  "--nxCloudId": "685c493590d9c940adb763b3"
+  "--nxCloudId": "685c493590d9c940adb763b3",
+  "nxCloudId": "68b9e6243122ec3e1b198760"
 }
