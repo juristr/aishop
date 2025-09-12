@@ -1,7 +1,7 @@
 name: CI
 
-# env:
-#   NX_CLOUD_ACCESS_TOKEN: ${{ secrets.CI_TOKEN_CLOUD }}
+env:
+  NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_STAGING }}
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
           filter: tree:0
           fetch-depth: 0
 
-      - run: npx nx-cloud start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="e2e-ci"
+      - run: npx nx start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="e2e-ci"
 
       # Cache node_modules
       - uses: actions/setup-node@v4
