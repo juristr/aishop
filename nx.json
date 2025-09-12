@@ -110,5 +110,7 @@
         "projects": ["tag:type:util"]
       }
     ]
-  }
+  },
+  "nxCloudId": "68c3fd231ccca32b3cd73bac",
+  "nxCloudUrl": "https://staging.nx.app"
 }
