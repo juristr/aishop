@@ -9,7 +9,6 @@ import CreateOrderPage from './pages/CreateOrderPage';
 import { ProductDetailPage } from '@aishop/feat-product-detail';
 
 export function App() {
-  console.log('test');
   return (
     <Router>
       <div className="min-h-screen flex flex-col bg-gray-50">
