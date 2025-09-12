@@ -22,7 +22,7 @@ jobs:
           filter: tree:0
           fetch-depth: 0
 
-      # - run: npx nx start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="e2e-ci"
+      - run: npx nx start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="e2e-ci"
 
       # Cache node_modules
       - uses: actions/setup-node@v4
@@ -34,11 +34,11 @@ jobs:
       # - run: npx playwright install --with-deps
       - uses: nrwl/nx-set-shas@v4
 
-      # - name: check formatting
-      #   run: npx nx-cloud record -- nx format:check
+      - name: check formatting
+        run: npx nx-cloud record -- nx format:check
 
       # run build tests and lints
       - run: npx nx run-many -t lint test build
 
-      # - run: npx nx-cloud fix-ci
-      #   if: always()
+      - run: npx nx-cloud fix-ci
+        if: always()
