@@ -110,9 +110,5 @@
         "projects": ["tag:type:util"]
       }
     ]
-  },
-  "--nxCloudId-snapshot": "685c493590d9c940adb763b3",
-  "--nxCloudId": "68b9e6243122ec3e1b198760",
-  "nxCloudId": "68c3f6501ccca32b3cd73ba3",
-  "nxCloudUrl": "https://staging.nx.app"
+  }
 }
