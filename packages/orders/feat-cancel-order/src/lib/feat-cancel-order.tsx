@@ -1,4 +1,4 @@
-import styles from './feat-cancel-order.module.css';
+import styles from './feat-cancel-order.module';
 
 export function FeatCancelOrder() {
   return (
